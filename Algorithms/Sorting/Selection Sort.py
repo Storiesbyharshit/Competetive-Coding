@@ -5,11 +5,11 @@ def selection_sort(nums):
 		
 		index = i
 		
-		for j in range(i+1,len(nums),1):
+		for j in range(i+1,len(nums)): #finding minimum
 			if nums[j] < nums[index]:
 				index = j
 			
-		if index != i:
+		if index != i:    #swapping minimum with i 
 			swap(nums,index,i)
 			
 	
