@@ -2,7 +2,7 @@
 def bubble_sort(nums):
     
 	for i in range(len(nums)-1):
-		for j in range(len(nums)-1-i):
+		for j in range(len(nums)-1-i): #size-i-1
 			if nums[j] > nums[j+1]: #swap if element on the left is greater than element on the right
 				swap(nums, j, j+1)
 	
