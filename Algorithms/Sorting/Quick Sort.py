@@ -5,23 +5,25 @@ def quick_sort(nums,low,high):
 		return
 		
 	pivot_index = partition(nums,low,high)
-	quick_sort(nums,low, pivot_index-1)
+	
+	quick_sort(nums,low, pivot_index-1) #recursive call
 	quick_sort(nums, pivot_index+1,high)
 	
 	
 def partition(nums,low,high):
 
 	pivot_index = (low+high)//2
-	swap(nums,pivot_index,high)
 	
-	i = low
+	swap(nums,pivot_index,high) #swap pivot and high
 	
-	for j in range(low,high,1):
+	i = low 				#i=low 
+	
+	for j in range(low,high):
 		if nums[j] <= nums[high]:
-			swap(nums,i,j)
-			i = i + 1
+			swap(nums,i,j)   #swap with low if j is less than high 
+			i = i + 1		#increasing low
 			
-	swap(nums,i,high)
+	swap(nums,i,high) #swap i and high 
 	
 	return i
 	
