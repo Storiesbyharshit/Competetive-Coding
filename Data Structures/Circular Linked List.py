@@ -10,10 +10,10 @@ class CircularDoublyLinkedList:
         self.first = None
  
     def get_node(self, index):
-        current = self.first
+        current = self.first 
         for i in range(index):
             current = current.next
-            if current == self.first:
+            if current == self.first: #checking for circular repetition
                 return None
         return current
  
@@ -24,22 +24,25 @@ class CircularDoublyLinkedList:
         ref_node.next = new_node
  
     def insert_before(self, ref_node, new_node):
-        self.insert_after(ref_node.prev, new_node)
+        self.insert_after(ref_node.prev, new_node) #inserting after prev of ref
  
     def insert_at_end(self, new_node):
-        if self.first is None:
+        if self.first is None: #empty list 
             self.first = new_node
             new_node.next = new_node
             new_node.prev = new_node
         else:
-            self.insert_after(self.first.prev, new_node)
+            self.insert_after(self.first.prev, new_node)  #inserting after end 
  
     def insert_at_beg(self, new_node):
         self.insert_at_end(new_node)
         self.first = new_node
  
     def remove(self, node):
-        if self.first.next == self.first:
+        if self.first is None:
+            print ("Empty List")
+            return
+        if self.first.next == self.first: #only one node 
             self.first = None
         else:
             node.prev.next = node.next
