@@ -6,16 +6,17 @@ class Node:
 class LinkedList:
     def __init__(self):
         self.start_node = None
-
-	def traverse_list(self):
-	    if self.start_node is None:
-	        print("List has no element")
-	        return
+		
+    def traverse_list(self):
+		if self.start_node is None:
+			print("List has no element")
+	        	return
 	    else:
 	        n = self.start_node
 	        while n is not None:
 	            print(n.item , " ")
-            n = n.ref
+            	n = n.ref
+			
     def insert_at_start(self, data):
         new_node = Node(data)
         new_node.ref = self.start_node
