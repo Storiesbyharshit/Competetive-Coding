@@ -3,11 +3,11 @@ def insertion_sort(nums):
     
 	for i in range(len(nums)):
 		
-		j = i
+		j = i                          			#sort elements from i to 0
 		
-		while j>0 and nums[j-1] > nums[j]:
+		while j>0 and nums[j-1] > nums[j]:  c		#swap if left is greater than right
 			swap(nums,j,j-1)
-			j = j - 1
+			j = j - 1				#iterating towards left
 	
 	return nums
 	
