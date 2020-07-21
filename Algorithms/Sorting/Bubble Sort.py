@@ -18,3 +18,4 @@ if __name__ == "__main__":
    a = [0,0,0,-1,-0,1,2,3,2,1]
    print(bubble_sort(a))
   
+ 
