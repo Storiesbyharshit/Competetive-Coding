@@ -3,9 +3,12 @@ def maxOccured(L,R,N,maxx):
     for i in range(N):
         arr[L[i]] += 1
         arr[R[i] + 1] -= 1
-    for i in range(1, len(arr)):
+        
+    for i in range(1, len(arr)): #prefix sum
         arr[i] += arr[i-1]
-    maxi = max(arr)
+        
+    maxi = max(arr) #getting maximum prefix sum
+    
     for i in range(len(arr)):
         if arr[i] == maxi:
             return i
