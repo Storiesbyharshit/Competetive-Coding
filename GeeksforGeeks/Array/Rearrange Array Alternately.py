@@ -36,3 +36,20 @@ def rearrange(arr, n):
     # array elements back to it's original form 
     for i in range(0, n) : 
         arr[i] = arr[i] // max_elem  
+
+
+##Complete this function
+def rearrange(arr, n): 
+    ##Your code here
+    if n%2 == 0:
+        for i in range(n//2):
+            arr.append(arr[n-1-i])
+            arr.append(arr[i])
+    else:
+        for i in range(n//2):
+            arr.append(arr[n-1-i])
+            arr.append(arr[i])
+        arr.append(arr[math.floor(n/2)])
+    arr[:] = arr[n:]
+    return arr
+
