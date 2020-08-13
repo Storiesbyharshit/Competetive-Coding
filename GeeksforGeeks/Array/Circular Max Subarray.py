@@ -32,4 +32,27 @@ def circularSubarraySum(arr,n):
     
     return max(k,rk)
     
-GeeksforGeeks
+#
+#
+
+#
+#
+#Complete this function
+def normalmaxsum(arr,n):
+    res=arr[0]
+    maxend=arr[0]
+    for i in range(1,n):
+        maxend=max(arr[i]+maxend,arr[i])
+        res=max(res,maxend)
+    return res    
+def circularSubarraySum(arr,n):
+    ##Your code here
+    max_normal=normalmaxsum(arr,n)
+    if max_normal<0:
+        return  max_normal
+    arr_sum=0
+    for i in range(0,n):
+        arr_sum+=arr[i]
+        arr[i]=-arr[i]
+    max_cir=arr_sum+ normalmaxsum(arr,n)
+    return max(max_normal,max_cir)
