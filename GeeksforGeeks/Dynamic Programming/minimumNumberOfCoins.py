@@ -22,3 +22,20 @@ def minimumNumberOfCoins(coins,numberOfCoins,value):
     if dp[-1] == sys.maxsize:
         return -1
     return dp[-1]
+
+##Complete this function
+def minimumNumberOfCoins(coins,numberOfCoins,value):
+    
+    # your code here
+    dp = [sys.maxsize]*(value+1)
+    dp[0] = 0
+    
+    for value in range(1,value+1):
+        for coin in range(numberOfCoins):
+            if coins[coin] <= value:
+                total = dp[value-coins[coin]]
+                if total != sys.maxsize and total+1 < dp[value]:
+                    dp[value] = total+1
+    if dp[-1] == sys.maxsize :
+        return -1
+    return dp[-1]
