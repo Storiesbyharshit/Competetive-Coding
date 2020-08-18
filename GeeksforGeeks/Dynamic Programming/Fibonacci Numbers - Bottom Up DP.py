@@ -1,6 +1,6 @@
 # Fibonacci Numbers - Bottom Up DP 
-One of the rudimentary problems to understand DP is finding the nth Fibonacci number. Here, we will solve the problem using a bottom-up approach.
-You are given a number N. You need to find the Nth Fibonacci number. The first two number of the series are 1 and 1.
+#One of the rudimentary problems to understand DP is finding the nth Fibonacci number. Here, we will solve the problem using a bottom-up approach.
+#You are given a number N. You need to find the Nth Fibonacci number. The first two number of the series are 1 and 1.
 
 
 def findNthFibonacci(number):
