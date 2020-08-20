@@ -1,4 +1,4 @@
-
+##
 
 #Python 3
 def sumSubstrings(s):
