@@ -1,6 +1,6 @@
-Given a number N. The task is to find the Nth catalan number.
+"""Given a number N. The task is to find the Nth catalan number.
 The first few Catalan numbers for N = 0, 1, 2, 3, … are 1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, …
-Note: Positions start from 0 as shown above.
+Note: Positions start from 0 as shown above."""
 
 
 def findCatalan(n): 
