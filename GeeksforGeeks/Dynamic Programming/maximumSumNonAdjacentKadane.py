@@ -1,4 +1,4 @@
-#User function Template for python3
+#python3
 
 
 def maximumSum(arr,sizeOfArray):
