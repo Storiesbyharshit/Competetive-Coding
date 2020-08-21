@@ -2,10 +2,12 @@
 
 """
 Maximize The Cut Segments 
-Given an integer N denoting the Length of a line segment. You need to cut the line segment in such a way that the cut length of a line segment each time is either x , y or z. Here x, y, and z are integers.
+Given an integer N denoting the Length of a line segment. You need to cut the line segment in such a
+way that the cut length of a line segment each time is either x , y or z. Here x, y, and z are integers.
 
 After performing all the cut operations, your total number of cut segments must be maximum.
-the problem can be solved by using dynamic programming in O(n) time.Here we should consider all segment lengths x,y,z and finding the best out of all cutted segment lengths. 
+the problem can be solved by using dynamic programming in O(n) time.Here we should consider all 
+segment lengths x,y,z and finding the best out of all cutted segment lengths. 
 for the total length of the segment consider the following recurences// for x, y, z running a loop
    
    
