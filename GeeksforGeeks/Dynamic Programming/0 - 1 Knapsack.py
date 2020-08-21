@@ -33,6 +33,10 @@ def knapSack(W, wt, val, n):
                 K[i][w] = max(val[i - 1] + K[i - 1][w - wt[i - 1]], K[i - 1][w])
             else:
                 K[i][w] = K[i - 1][w]
+                
+                
+                
+                ####
 
     return K[n][W]
 
