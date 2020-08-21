@@ -7,6 +7,9 @@ Iterate over the array, use binary search to find best indexes to place new elem
 Longest Increasing Subsequence 
 Given an array of integers, find the length of the longest (strictly) increasing subsequence from the given array.
 
+
+####
+Basically we store in dp array the posn of 1st highest number found when considering a[i]
 """
 
 #Python 3
