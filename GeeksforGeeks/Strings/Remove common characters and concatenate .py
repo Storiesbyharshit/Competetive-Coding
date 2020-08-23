@@ -1,4 +1,4 @@
-##########
+
 
 def concatenatedString(s,p):
     #code here
