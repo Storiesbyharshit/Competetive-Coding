@@ -1,14 +1,19 @@
-#User function Template for python3
-
-'''
-	Your task is to return concatenated string
-	after removing characters which are
-	common to both string.
+def concatenatedString(s,p):
+    #code here
+    cms = set(s) & set(p)
+    rst = []
+    for i in s:
+        if i not in cms:
+            rst.append(i)
+    for i in p:
+        if i not in cms:
+            rst.append(i)
+    if len(rst) == 0:
+        return -1
+    else:
+        return ''.join(rst)
+    
 	
-	Function Arguments: s and p (given strings)
-	Return Type: string
-'''
-
 def concatenatedString(s,p):
     #code here
     occurrence_s=[0 for i in range(256)]
