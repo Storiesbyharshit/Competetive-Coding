@@ -1,5 +1,5 @@
 #Python 3
-#
+####
 '''
 	Function to check if the given string can be obtained
 	by rotating other string 'p' by two places.
