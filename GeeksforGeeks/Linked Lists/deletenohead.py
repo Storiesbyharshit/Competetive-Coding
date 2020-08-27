@@ -1,4 +1,19 @@
 def deleteNode(curr_node):
+    #code here
+    if curr_node is None or curr_node.next is None:
+        curr_node = None
+        return
+    curr_node.data = curr_node.next.data
+    curr_node.next = curr_node.next.next
+    
+def deleteNode(curr_node):
+    #code here
+
+    if curr_node:
+            curr_node.data = curr_node.next.data
+            curr_node.next = curr_node.next.next
+	
+def deleteNode(curr_node):
     # handle case with empty or single element
     if curr_node is None:
         return
