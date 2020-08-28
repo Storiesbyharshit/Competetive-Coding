@@ -16,3 +16,25 @@ def pairwiseSwap(head):
         curr_node=temp
 
     return head
+
+# swap pairwise nodes of the linked list and return the head
+def pairwiseSwap(head):
+    curr, prev, c = head, None, 2
+    while c > 0 and curr is not None:
+        nextNode = curr.next
+        curr.next = prev
+        prev = curr
+        curr = nextNode
+        c-=1
+    if nextNode is not None:
+        head.next = pairwiseSwap(nextNode)
+    return prev
+    
+ # swap pairwise nodes of the linked list and return the head
+def pairwiseSwap(head):
+    #code here
+    curr=head
+    while curr!=None and curr.next!=None:
+        curr.data,curr.next.data=curr.next.data,curr.data
+        curr=curr.next.next
+    return head
