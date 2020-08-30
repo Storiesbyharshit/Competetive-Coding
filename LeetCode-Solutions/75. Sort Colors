@@ -1,0 +1,16 @@
+class Solution:
+    def sortColors(self, nums: List[int]) -> None:
+
+        dummy = [0,0,0]
+        
+        for i in nums:
+            dummy[i]+=1 
+            
+        i = 0
+        
+        for idx in range(len(nums)):
+            while dummy[i]==0:
+                i+=1
+            nums[idx]= i
+            dummy[i] -= 1
+                
