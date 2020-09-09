@@ -1,0 +1,30 @@
+def isSafe(a, b, x, m):
+    if(a>=0 and a<x and b>=0 and b<x and m[a][b]!=0):
+        return True
+    return False
+
+def solveMaze(a, b, x, m, sol):
+    if(a==x-1 and b==x-1):
+        sol[a][b]=1
+        return True
+
+    if(isSafe(a, b, x, m)==True):
+        sol[a][b]=1
+        for i in range(1, (m[a][b]+1), 1) :
+            if(i>=x):
+                break
+            if(solveMaze(a, b+i, x, m, sol)==True):
+                return True
+            if(solveMaze(a+i, b, x, m, sol)==True):
+                return True
+        sol[a][b]=0
+        return False
+    return False
+
+
+def solve(n, maze):
+        sol = [[0 for i in range(n)] for j in range(n)]
+        if(solveMaze(0, 0, n, maze, sol)==False):
+            print(-1)
+        else:
+            print_sol(n, sol)
